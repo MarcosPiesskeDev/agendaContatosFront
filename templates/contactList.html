@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de Contatos</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <div> 
+            <button type="button" onclick="returnNC()">Registrar um novo contato</button>
+            <button type="button" onclick="showDiv('deleteContactDiv')">Excluir Contato</button>
+            <button type="button" onclick="showDiv('editContactDiv')">Alterar um contato</button>
+            <button type="button" onclick="showDiv('findCDiv')">Buscar Contato</button>
+        </div>
+        <br>
+        <div id="deleteContactDiv" class="container my-5" style="display:none">
+            <p>Digite o ID da pessoa a qual deseja excluir:</p>
+            <input type="text" id="idToDelete" name="idToDelete" placeholder="Escreva um ID">
+            <button type="button" class="btn btn-secundary" onclick="deleteById()">Excluir</button> 
+        </div>
+        <br>
+        <div id="editContactDiv" class="container my-5" style="display:none">
+            <hr>
+            <p>Digite o ID da pessoa, e os dados a qual deseja alterar:</p>
+            <input type="text" id='getIdDom' placeholder="Insira um ID">
+            <br>
+            <br>
+            <input type="text" id="fNameC" name="fNameC" placeholder="Nome">
+            <input type="text" id="lNameC" name="lNameC" placeholder="Sobrenome">
+            <input type="text" id="emailC" name="emailC" placeholder="E-mail">
+            <input type="text" id="telC" name="telC" placeholder="Telefone">
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="putMethod()">Alterar</button>
+            <br>
+        </div>
+        <br>
+        <div id="findCDiv" class="container my-5" style="display:none">
+            <p>Escreva o ID ou o primeiro nome do contato que deseja procurar:</p>
+            <input type="text" id="findC">
+            <ul id="findCId">
+
+            </ul>
+            <button type="button" class="btn btn-primary" onclick="findContact()">Procurar</button>
+            <hr>
+        </div> 
+
+        <br>
+        <h3>Seus contatos: </h3>
+        <br>
+        <br>
+        <div class="container my-5">
+            <ul class="w3-ul" id="listC">
+                
+            </ul>
+        </div>
+        <script>
+            function showDiv(element) {
+                var display = document.getElementById(element).style.display;
+                if(display == "none"){
+                    document.getElementById(element).style.display = 'block';
+                }else{
+                    document.getElementById(element).style.display = 'none';
+                }
+            }
+        </script>
+        <script src="../script/ajaxGet.js"></script>
+        <script src="../script/ajaxDelete.js"></script>
+        <script src="../script/ajaxPut.js"></script>            
+    </body>
+</html>
