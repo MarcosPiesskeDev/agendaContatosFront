@@ -20,7 +20,7 @@ function putMethod(){
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
                 },
-            body: JSON.stringify(data)
+            body: JSON.stringify(contactData)
     };
         fetch(url, header)
         .then(() => {

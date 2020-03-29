@@ -20,7 +20,6 @@ function deleteById(){
     fetch(url+getId, header)
     .then(function(resolve){
         console.log(resolve); //Prometeu! :D
-        document.getElementById('idToDelete').value = "";
         window.location.reload();
     },
     function(reject){
