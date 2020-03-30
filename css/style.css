@@ -1,26 +1,11 @@
 body{
-    background-color:#904bb0;
+    background-color: #5622cb;
 }
 
 h1{
     color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-}
-
-.whiteBoxIndex{
-    background-color: #ffffff;
-    height: 45%; 
-    width: 35%; 
-    margin-top: 8%;
-    margin-bottom: 8%;
-    position: relative;
-    text-align: center;
-    padding-right: 15%;
-    padding-left: 8%;
-    margin-right: auto; 
-    margin-left: auto;
-    border-radius: 7px;
 }
 
 .buttonCustomF {
@@ -40,7 +25,70 @@ h1{
     }.buttonCustomF:hover {
         background-color:#c762e0;
         border:none!important;
-    }.buttonCustomF:active {
-        position:relative;
-        top:1px;
+}
+
+
+.pForm{
+    font-size: small;
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #5c1685;
+    text-align: left;
+}
+
+.whiteBoxIndex{
+    background-color: #ffffff;
+    height: 50%; 
+    width: 24%; 
+    margin-top: 3%;
+    margin-bottom: 8%;
+    position: absolute;
+    text-align: center;
+    padding-right: 14%;
+    padding-left: 3%;
+    margin-right: auto; 
+    margin-left: 36%;
+    border-radius: 7px;
+}
+
+.buttonTopIndex{
+    position: absolute; 
+    bottom: 66%; 
+    width: 76%;
+}
+
+.buttonBottonIndex{
+    position: absolute; 
+    bottom: 27%; 
+    width: 76%;
+}
+
+.whiteBoxNewC{
+    background-color: #ffffff;
+    height: 60%; 
+    width: 24%; 
+    margin-top: 3%;
+    margin-bottom: 8%;
+    position: absolute;
+    text-align: center;
+    padding-right: 14%;
+    padding-left: 3%;
+    margin-right: auto; 
+    margin-left: 19%;
+    border-radius: 7px;
+}
+
+.lavenderBoxNewC{
+    background-color: #6874b8;
+    height: 40%; 
+    width: 45%;
+    top: 27%; 
+    margin-top: 3%;
+    margin-bottom: 8%;
+    position: fixed;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 25%;
+    margin-right: auto; 
+    margin-left: 20%;
+    border-radius: 7px;
 }
