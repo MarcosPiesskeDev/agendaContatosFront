@@ -8,6 +8,14 @@ h1{
     text-align: center;
 }
 
+.divTopBackB{
+    text-align: center;
+    padding-bottom: 30px;
+    position: absolute;
+    top: 2%;
+    margin-left: 93%;
+}
+
 .buttonCustomF {
     background-color:#5c1685;
         display: block;
@@ -77,7 +85,7 @@ h1{
     border-radius: 7px;
 }
 
-.lavenderBoxNewC{
+.lightBlueBoxNewC{
     background-color: #6874b8;
     height: 40%; 
     width: 45%;

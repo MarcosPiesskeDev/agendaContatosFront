@@ -3,6 +3,10 @@ function showC() {
     location.replace("../templates/contactList.html");
 }
 
+function backIndex(){
+    location.replace('../index.html');
+}
+
 function sendData(){
 
 var url = 'http://localhost:8080/api/contacts/new';
