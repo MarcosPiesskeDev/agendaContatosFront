@@ -1,0 +1,46 @@
+body{
+    background-color:#904bb0;
+}
+
+h1{
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.whiteBox{
+    background-color: #ffffff;
+    height: 45%; 
+    width: 35%; 
+    margin-top: 8%;
+    margin-bottom: 8%;
+    position: relative;
+    text-align: center;
+    padding-right: 15%;
+    padding-left: 8%;
+    margin-right: auto; 
+    margin-left: auto;
+    border-radius: 7px;
+}
+
+.buttonCustomF {
+    background-color:#5c1685;
+        display: block;
+        color:#ffffff;
+        font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        font-size:15px;
+        font-style:normal;
+        height:50px;
+        line-height:50px;
+        width:250px;
+        text-decoration:none;
+        text-align:center;
+        border:none!important;
+        border-radius: 2px;
+    }.buttonCustomF:hover {
+        background-color:#c762e0;
+        border:none!important;
+    }.buttonCustomF:active {
+        position:relative;
+        top:1px;
+}

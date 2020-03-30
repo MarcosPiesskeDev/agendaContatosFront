@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Agenda de Contatos</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container my-5">
+            <h1>Bem vindo à minha lista de contatos :D</h1>
+            <br>
+            <hr>
+        </div>
+        <div class="container my-5 whiteBox">
+            <br>
+            <button class="buttonCustomF" onclick="addNewContact()">Adicionar um novo contato</button><br>
+            <br>
+            <button class="buttonCustomF" onclick="showContactList()">Mostrar a lista de contatos</button><br>
+        </div>
+    </body>
+    <script>
+        function addNewContact(){
+            location.replace("templates/newContact.html");
+        }
+        function showContactList(){
+            location.replace("templates/contactList.html")
+        }
+    </script>
+</html>
