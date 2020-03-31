@@ -9,16 +9,16 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" style="min-height: 65px; background-color: #6874b8; border: 1px solid transparent">
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="min-height: 65px; background-color: white; border: 1px solid transparent">
             <div class="divTopBackB">
                 <img alt="icons8.com.br" src="../img/back64px.png" onclick="backI()">
             </div>
-            <p class="navbar-text navPLC" style="color: white;">Lista de Contatos</p>
+            <p class="navbar-text navPLC" style="color: #5c1685;">Lista de Contatos</p>
             <div class="verticalLine">
                 <ul class="nav navbar-nav">
-                <li><button class="navButtonLC btn btn-success myFont" type="button" onclick="returnNC()">Registrar um novo contato</button></li>
-                <li> <button class="navButtonLC btn btn-default myFont" type="button" style="color: #5c1685;" onclick="showTwoDiv('editContactDiv', 'editContactSecondDiv')">Alterar um contato</button></li>
-                <li><button class="navButtonLC btn btn-info myFont" type="button" onclick="showDiv('findCDiv')">Buscar Contato</button></li>  
+                <li><button class="navButtonLC bNavNewC"type="button" onclick="returnNC()">Registrar um novo contato</button></li>
+                <li> <button class="navButtonLC bNavChange" type="button" onclick="showTwoDiv('editContactDiv', 'editContactSecondDiv')">Alterar contato</button></li>
+                <li><button class="navButtonLC bNavFindC" type="button" onclick="showDiv('findCDiv')">Buscar Contato</button></li>  
                 <li><button class="navButtonLC btn btn-danger navbar-btn myFont" type="button" onclick="showDiv('deleteContactDiv')">Excluir Contato</button></li>  
                 </ul>
             </div>
@@ -34,16 +34,7 @@
             <br><br>
             <p class="pFormOBS">OBS: Para fechar esta tela, pressione novamente o botão: "Excluir Contato".</p>
         </div>
-
-
-        <div id="editContactSecondDiv" class="container lightBlueBoxLC" style="display:none">
-            <br><br>
-            <p class="pFormOBSLC">OBS: Para fechar esta tela, pressione novamente o botão: "Alterar Contato".</p>
-            <br><br>
-            <button type="button" class="buttonCustomLC" onclick="putMethod()">Alterar</button>
-            <br>
-        </div>
-        <div id="editContactDiv" class="changeCBox" style="display:none"> <!--style="display:none"-->
+        <div id="editContactDiv" class="changeCBox" style="display:none"> 
             <br>
             <p class="pFormCenter">Digite o ID da pessoa, e preencha o formulário com o que deseja que seja alterdo. Após isso, basta clicar em "Alterar":</p>
             <input type="text" id='getIdDom' placeholder="Insira um ID">
@@ -61,23 +52,32 @@
             <p class="pFormLeft">Telefone:</p>
             <input type="text" style="width:108%" id="telC" name="telC">
             <p></p>
-            <br>
-            <br>
+            <p class="pFormOBS">OBS: Para fechar esta tela, pressione novamente o botão: "Alterar Contato".</p>
+            <br><p></p>
+            <div id="editContactSecondDiv" class="container bChangeCBox" style="display:none" > 
+                <button type="button" class="bCustomLC" onclick="putMethod()">Alterar</button>
+            </div>
         </div>
-
-
-
-
         <br>
-        <div id="findCDiv" class="container my-5" style="display:none">
-            <p>Escreva o ID ou o primeiro nome do contato que deseja procurar:</p>
-            <input type="text" id="findC">
-            <ul id="findCId">
 
-            </ul>
-            <button type="button" class="btn btn-primary" onclick="findContact()">Procurar</button>
-            <hr>
-        </div> 
+
+        <div id="findCDiv" class="findCBox" style="display:none" > <!--style="display:none"-->
+            <br>
+            <p class="pFormCenter">Escreva o ID ou o primeiro nome do contato que deseja procurar e clique em "Buscar":</p>
+            <input type="text" id="findC" placeholder="Contato ID" >
+            <button type="button" class="bCustomFindC" onclick="findContact()">Buscar</button>
+            <br>
+            <p class="pFormOBS">OBS: Para fechar esta tela, pressione novamente o botão: "Buscar Contato".</p>
+            <div id="showCByFind" class="findCBoxResult" style="display:none">
+                <br>
+                <p class="pFormCenter">Contato encontrado:</p>
+                <ul id="findCId">
+                    
+                </ul>
+            </div>
+        </div>
+        
+        
         <br>
         <br>
         <div>

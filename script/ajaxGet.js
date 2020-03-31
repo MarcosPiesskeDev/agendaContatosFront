@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function findContact(){
 
+    var contendDiv = document.getElementById('showCByFind').style.display;
+    if(contendDiv == "none"){
+        document.getElementById('showCByFind').style.display = 'block';
+    }else{
+        document.getElementById('showCByFind').style.display = 'none';
+    }
+
     var getId = document.querySelector('input[id=findC]').value;
     var url = 'http://localhost:8080/api/contacts/list/';
   
@@ -55,7 +62,8 @@ function findContact(){
           <li> Sobrenome : ${lastName} </li>
           <li> E-mail : ${email} </li>
           <li> Telefone : ${telephone}</li>
-          <hr>`;
+          <hr>`; 
+        
     }).catch(function(error){
         console.error(error);
   })
