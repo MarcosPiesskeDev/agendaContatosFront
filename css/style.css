@@ -347,14 +347,14 @@ h3{
 .findCBoxResult{
     background-color: #ffffff;
     height: 34%; 
-    width: 18%; 
+    width: 25%; 
     margin-top: 2%;
     margin-bottom: 2%;
     top: 16%;
     position: fixed;
     text-align: center;
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-right: 0%;
+    padding-left: 0%;
     margin-right: auto; 
     margin-left: 26%;
     border-radius: 7px;

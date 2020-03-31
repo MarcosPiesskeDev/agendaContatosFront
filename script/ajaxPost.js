@@ -32,12 +32,16 @@ var url = 'http://localhost:8080/api/contacts/new';
 
     fetch(url, header)
     .then(function(resolve){
-        console.log(resolve);  //Prometeu :D
+        if(resolve.status == 200){
+            alert('Contato Salvo com sucesso! :D');
+        }else{
+            alert('Houve um problema em salvar :( \n Tente novamente!');
+        } 
+        console.log(resolve.status);  //Prometeu :D
     }, 
-    function(reject){
+    function(reject){ 
         console.log(reject); //Quebrou a promessa :(
-    });
-
+    });       
     document.getElementById('fNameC').value = ""; //Resetando os campos do formulário || Reset fields of form 
     document.getElementById('lNameC').value = "";
     document.getElementById('emailC').value = "";

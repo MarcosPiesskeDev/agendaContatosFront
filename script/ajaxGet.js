@@ -11,11 +11,14 @@ document.addEventListener("DOMContentLoaded", function(){
     .then(function(data){
         data.forEach((user) => {
             const { id, firstName, lastName, email, telephone} = user
-            myList.innerHTML += `<h5> ID Contato: ${id} </h5>
-                <li> Nome : ${firstName}</li>
-                <li> Sobrenome : ${lastName} </li>
-                <li> E-mail : ${email} </li>
-                <li> Telefone : ${telephone}</li>
+            myList.innerHTML += `<h5 style="color: white"> ID Contato: ${id} </h5>
+                <li style="color: white"> Nome : ${firstName}</li>
+                <p></p>
+                <li style="color: white"> Sobrenome : ${lastName} </li>
+                <p></p>
+                <li style="color: white"> E-mail : ${email} </li>
+                <p></p>
+                <li style="color: white"> Telefone : ${telephone}</li>
                 <hr>`;
           });
        console.log(data);
@@ -57,12 +60,14 @@ function findContact(){
       const { id, firstName, lastName, email, telephone} = data
       
       return document.querySelector('ul[id=findCId]')
-      .innerHTML = `<h5> User ID: ${id} </h5>
+      .innerHTML = `<h5>ID Contato: ${id} </h5>
           <li> Nome : ${firstName}</li>
+          <p></p>
           <li> Sobrenome : ${lastName} </li>
+          <p></p>
           <li> E-mail : ${email} </li>
-          <li> Telefone : ${telephone}</li>
-          <hr>`; 
+          <p></p>
+          <li> Telefone : ${telephone}</li>`; 
         
     }).catch(function(error){
         console.error(error);

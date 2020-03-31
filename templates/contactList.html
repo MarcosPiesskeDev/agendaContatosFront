@@ -6,6 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="icon" alt="icons8.com.br" href="../img/fav100px.png"/>
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
     </head>
     <body>
@@ -61,17 +62,17 @@
         <br>
 
 
-        <div id="findCDiv" class="findCBox" style="display:none" > <!--style="display:none"-->
+        <div id="findCDiv" class="findCBox" style="display:none" >
             <br>
             <p class="pFormCenter">Escreva o ID ou o primeiro nome do contato que deseja procurar e clique em "Buscar":</p>
             <input type="text" id="findC" placeholder="Contato ID" >
             <button type="button" class="bCustomFindC" onclick="findContact()">Buscar</button>
             <br>
             <p class="pFormOBS">OBS: Para fechar esta tela, pressione novamente o botão: "Buscar Contato".</p>
-            <div id="showCByFind" class="findCBoxResult" style="display:none">
+            <div id="showCByFind" class="findCBoxResult" style="display:none;text-align: left;">
                 <br>
                 <p class="pFormCenter">Contato encontrado:</p>
-                <ul id="findCId">
+                <ul id="findCId" style="text-align: left;">
                     
                 </ul>
             </div>
