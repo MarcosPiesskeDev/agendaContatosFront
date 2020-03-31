@@ -22,5 +22,5 @@ Apenas a interface está funcionando. Para que ela funcione 100%, deverás confi
 ## Instalar o Back-End da aplicação:
 
 1. Acessar o link: https://gitlab.com/Marcos_Piesske_Dev/agendaContatoSpring
-2. Seguir o passo a passo no REDME.md no repositório acima.
+2. Seguir o passo a passo no REDME.md do repositório acima.
 
