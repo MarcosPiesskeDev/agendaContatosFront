@@ -5,7 +5,7 @@ body{
 h1{
     color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+    margin-left: 28%;
 }
 
 .divTopBackB{
@@ -14,6 +14,13 @@ h1{
     position: absolute;
     top: 2%;
     margin-left: 93%;
+}
+
+.verticalLine{
+    height: 65px;
+    border-left: 1px solid;
+    margin-left: 11%;
+    color: rgb(236, 229, 250);
 }
 
 .buttonCustomF {
@@ -25,7 +32,7 @@ h1{
         font-style:normal;
         height:50px;
         line-height:50px;
-        width:250px;
+        width:170px;
         text-decoration:none;
         text-align:center;
         border:none!important;
@@ -35,12 +42,70 @@ h1{
         border:none!important;
 }
 
+.buttonCustomS{
+    background-color:#e6e6e6;
+        display: block;
+        color:#5c1685;
+        font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        font-size:15px;
+        font-style:normal;
+        height:50px;
+        line-height:50px;
+        width:170px;
+        text-decoration:none;
+        text-align:center;
+        border:1px solid #5c1685;
+        border-width: 1px;
+        border-color: #5c1685;
+        border-radius: 2px;
+    }.buttonCustomS:hover {
+        background-color:#fcfcfc;
+        border:none!important;
+        color:#5c1685;
+}
 
-.pForm{
+.buttonInlineOne{
+    margin-top: 20%;
+    margin: 20px;
+    top: 67%;
+    margin-left: 25%;
+    display: inline-block;
+    position: fixed;  
+}
+
+.buttonInlineTwo{
+    margin-top: 10px;
+    margin: 20px;
+    top: 67%;
+    margin-right: 24%;
+    margin-left: 42%;
+    display: inline-block;
+    position: fixed;    
+}
+
+.myFont{
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+.pFormLeft{
     font-size: small;
     font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     color: #5c1685;
     text-align: left;
+}
+
+.pFormCenter{
+    font-size: small;
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #5c1685;
+    text-align: center;
+}
+
+.pFormOBS{
+    font-size: small;
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #55ade0;
+    text-align: justify;
 }
 
 .whiteBoxIndex{
@@ -72,31 +137,108 @@ h1{
 
 .whiteBoxNewC{
     background-color: #ffffff;
-    height: 60%; 
-    width: 24%; 
-    margin-top: 3%;
-    margin-bottom: 8%;
+    height: 63%; 
+    width: 39%;
+    top: 17%; 
+    margin-top: 1%;
+    margin-bottom: 2%;
     position: absolute;
     text-align: center;
-    padding-right: 14%;
+    padding-right: 16%;
     padding-left: 3%;
     margin-right: auto; 
-    margin-left: 19%;
+    margin-left: 21%;
     border-radius: 7px;
 }
 
-.lightBlueBoxNewC{
+.navButtonLC{
+    margin-top: 15px; 
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.navPLC{ 
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    font-size: medium;
+    margin-right: 5px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+
+.deleteCBox{
+    background-color: #ffffff;
+    height: 32%;
+    width: 24%;
+    top: 16%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    position: fixed;
+    text-align: center;
+    padding-right: 1%;
+    padding-left: 1%;
+    margin-right: auto;
+    margin-left: 35%;
+    border-radius: 7px;
+}
+
+.changeCBox{
+    background-color: #ffffff;
+    height: 67%; 
+    width: 28%; 
+    margin-top: 2%;
+    margin-bottom: 8%;
+    position: absolute;
+    text-align: center;
+    padding-right: 4%;
+    padding-left: 3%;
+    margin-right: auto; 
+    margin-left: 28%;
+    border-radius: 7px;
+}
+
+
+.lightBlueBoxLC{
     background-color: #6874b8;
-    height: 40%; 
-    width: 45%;
-    top: 27%; 
+    height: 38%; 
+    width: 50%;
+    top: 23%; 
     margin-top: 3%;
     margin-bottom: 8%;
     position: fixed;
     text-align: center;
-    padding-right: 5%;
-    padding-left: 25%;
+    padding-right: 2%;
+    padding-left: 30%;
     margin-right: auto; 
-    margin-left: 20%;
+    margin-left: 29%;
     border-radius: 7px;
 }
+
+.buttonCustomLC{
+    background-color:#5c1685;
+        display: block;
+        color:#ffffff;
+        font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        font-size:15px;
+        font-style:normal;
+        height:50px;
+        line-height:50px;
+        width:100px;
+        margin-left: 28%;
+        text-decoration:none;
+        text-align:center;
+        border:none!important;
+        border-radius: 2px;
+    }.buttonCustomLC:hover {
+        background-color:#c762e0;
+        border:none!important;
+}
+
+
+.pFormOBSLC{
+    font-size: small;
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #f7f1ff;
+    text-align: justify;
+}
+

@@ -6,37 +6,68 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
     </head>
     <body>
-        <div> 
-            <button type="button" onclick="returnNC()">Registrar um novo contato</button>
-            <button type="button" onclick="showDiv('deleteContactDiv')">Excluir Contato</button>
-            <button type="button" onclick="showDiv('editContactDiv')">Alterar um contato</button>
-            <button type="button" onclick="showDiv('findCDiv')">Buscar Contato</button>
-        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="min-height: 65px; background-color: #6874b8; border: 1px solid transparent">
+            <div class="divTopBackB">
+                <img alt="icons8.com.br" src="../img/back64px.png" onclick="backI()">
+            </div>
+            <p class="navbar-text navPLC" style="color: white;">Lista de Contatos</p>
+            <div class="verticalLine">
+                <ul class="nav navbar-nav">
+                <li><button class="navButtonLC btn btn-success myFont" type="button" onclick="returnNC()">Registrar um novo contato</button></li>
+                <li> <button class="navButtonLC btn btn-default myFont" type="button" style="color: #5c1685;" onclick="showTwoDiv('editContactDiv', 'editContactSecondDiv')">Alterar um contato</button></li>
+                <li><button class="navButtonLC btn btn-info myFont" type="button" onclick="showDiv('findCDiv')">Buscar Contato</button></li>  
+                <li><button class="navButtonLC btn btn-danger navbar-btn myFont" type="button" onclick="showDiv('deleteContactDiv')">Excluir Contato</button></li>  
+                </ul>
+            </div>
+          </nav>
         <br>
-        <div id="deleteContactDiv" class="container my-5" style="display:none">
-            <p>Digite o ID da pessoa a qual deseja excluir:</p>
-            <input type="text" id="idToDelete" name="idToDelete" placeholder="Escreva um ID">
-            <button type="button" class="btn btn-secundary" onclick="deleteById()">Excluir</button> 
+        <br><br>
+        <div id="deleteContactDiv" class="deleteCBox" style="display:none"> 
+            <p class="pFormCenter" style="margin-top: 3%">Digite o ID da pessoa a qual deseja excluir, e pressione o botão "Excluir":</p>
+            <input type="text" style="width:89%" id="idToDelete" name="idToDelete" placeholder="Escreva um ID">
+            <br>
+            <br>
+            <button type="button" class="btn btn-danger" onclick="deleteById()">Excluir</button>
+            <br><br>
+            <p class="pFormOBS">OBS: Para fechar esta tela, pressione novamente o botão: "Excluir Contato".</p>
         </div>
-        <br>
-        <div id="editContactDiv" class="container my-5" style="display:none">
-            <hr>
-            <p>Digite o ID da pessoa, e os dados a qual deseja alterar:</p>
+
+
+        <div id="editContactSecondDiv" class="container lightBlueBoxLC" style="display:none">
+            <br><br>
+            <p class="pFormOBSLC">OBS: Para fechar esta tela, pressione novamente o botão: "Alterar Contato".</p>
+            <br><br>
+            <button type="button" class="buttonCustomLC" onclick="putMethod()">Alterar</button>
+            <br>
+        </div>
+        <div id="editContactDiv" class="changeCBox" style="display:none"> <!--style="display:none"-->
+            <br>
+            <p class="pFormCenter">Digite o ID da pessoa, e preencha o formulário com o que deseja que seja alterdo. Após isso, basta clicar em "Alterar":</p>
             <input type="text" id='getIdDom' placeholder="Insira um ID">
             <br>
             <br>
-            <input type="text" id="fNameC" name="fNameC" placeholder="Nome">
-            <input type="text" id="lNameC" name="lNameC" placeholder="Sobrenome">
-            <input type="text" id="emailC" name="emailC" placeholder="E-mail">
-            <input type="text" id="telC" name="telC" placeholder="Telefone">
+            <p class="pFormLeft">Nome:</p>
+            <input type="text" style="width:108%" id="fNameC" name="fNameC">
+            <br><p></p>
+            <p class="pFormLeft">Sobrenome:</p>
+            <input type="text" style="width:108%" id="lNameC" name="lNameC">
+            <br><p></p>
+            <p class="pFormLeft">E-mail:</p>
+            <input type="email" style="width:108%" id="emailC" name="emailC">
+            <br><p></p>
+            <p class="pFormLeft">Telefone:</p>
+            <input type="text" style="width:108%" id="telC" name="telC">
+            <p></p>
             <br>
-            <br>
-            <button type="button" class="btn btn-primary" onclick="putMethod()">Alterar</button>
             <br>
         </div>
+
+
+
+
         <br>
         <div id="findCDiv" class="container my-5" style="display:none">
             <p>Escreva o ID ou o primeiro nome do contato que deseja procurar:</p>
@@ -47,11 +78,11 @@
             <button type="button" class="btn btn-primary" onclick="findContact()">Procurar</button>
             <hr>
         </div> 
-
-        <br>
-        <h3>Seus contatos: </h3>
         <br>
         <br>
+        <div>
+            <h3>Seus contatos: </h3>
+        </div>
         <div class="container my-5">
             <ul class="w3-ul" id="listC">
                 
@@ -65,6 +96,22 @@
                 }else{
                     document.getElementById(element).style.display = 'none';
                 }
+            }
+            
+            function showTwoDiv(fDiv, sDiv){
+                var firstDiv = document.getElementById(fDiv).style.display;
+                var secondDiv = document.getElementById(sDiv).style.display;
+                if(firstDiv == "none" && secondDiv == "none"){
+                    document.getElementById(fDiv).style.display = 'block';
+                    document.getElementById(sDiv).style.display = 'block';
+                }else{
+                    document.getElementById(fDiv).style.display = 'none';
+                    document.getElementById(sDiv).style.display = 'none';
+                }
+            }
+
+            function backI(){
+                location.replace("../index.html");
             }
         </script>
         <script src="../script/ajaxGet.js"></script>

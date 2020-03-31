@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="divTopBackB">
-            <button onclick="backIndex()">Voltar</button>
+            <img alt="icons8.com.br" src="../img/back64px.png" onclick="backIndex()">
         </div>
         <div class="container">
             <h1>Adicione um novo contato</h1>
@@ -19,27 +19,35 @@
             <div class="lightBlueBoxNewC">
                 <br>
                 <br>
-                <button class="buttonCustomF" onclick="sendData()">Adicionar</button>
+                
                 <br><br><br>
-                <button type="button" class="buttonCustomF" onclick='showC()'>Mostrar contatos</button>
+               
                 <br>
             </div>
             <div class="container whiteBoxNewC">
                 <br>
-                <p class="pForm">Nome:</p>
-                <input type="text" style="width:256%" id="fNameC" name="fNameC" placeholder="Nome">
+                <p class="pFormLeft">Nome:</p>
+                <input type="text" style="width:160%" id="fNameC" name="fNameC">
                 <br>
                 <br>
-                <p class="pForm">Sobrenome:</p>
-                <input type="text" style="width:256%" id="lNameC" name="lNameC" placeholder="Sobrenome">
+                <p class="pFormLeft">Sobrenome:</p>
+                <input type="text" style="width:160%" id="lNameC" name="lNameC">
                 <br><br>
-                <p class="pForm">E-mail:</p>
-                <input type="email" style="width:256%" id="emailC" name="emailC" placeholder="E-mail">
+                <p class="pFormLeft">E-mail:</p>
+                <input type="email" style="width:160%" id="emailC" name="emailC">
                 <br><br>
-                <p class="pForm">Telefone:</p>
-                <input type="text" style="width:256%" id="telC" name="telC" placeholder="Telefone">
-                <br/>      
+                <p class="pFormLeft" style="text-align: justify;">Telefone:</p>
+                <input type="text" style="width:160%" id="telC" name="telC">
+                <br/>
+                
             </div>
+            <div class="buttonInlineOne">
+                <button type="button" class="buttonCustomF"  onclick="sendData()">Adicionar</button>
+            </div>
+            <div class="buttonInlineTwo">
+                <button type="button" class="buttonCustomS "  onclick='showC()'>Mostrar contatos</button>      
+            </div>
+            
             <br>
             <br>
             <br>
