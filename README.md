@@ -11,7 +11,7 @@ Esta é a interface do projeto 'Agenda de Contatos' criada para vir a facilitar 
 5. Execute este arquivo: 
 
 #### Screenshot:
-![star_xampp](https://gitlab.com/Marcos_Piesske_Dev/agendaContatosFront/-/blob/master/start_xampp.png) 
+![star_xampp](https://github.com/MarcosPiesskeDev/agendaContatosFront/blob/master/start_xampp.png) 
 
 ### Testar aplicação:
 Basta ir em seu navegador e acessar: localhost/nomeDoProjetoClonado
