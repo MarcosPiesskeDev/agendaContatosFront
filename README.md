@@ -5,7 +5,7 @@ Esta é a interface do projeto 'Agenda de Contatos' criada para vir a facilitar 
 ### Instalação:
 
 1. Instale o Xampp em seu computador, você pode obter o mesmo neste link: https://www.apachefriends.org/download.html (Instale a versão que é compatível com o seu sistema operacional; 
-2. Faça um clone deste projeto com este código:  git clone https://gitlab.com/Marcos_Piesske_Dev/agendaContatosFront
+2. Faça um clone deste projeto com este código:  git clone https://github.com/MarcosPiesskeDev/agendaContatosFront
 3. Mova então o projeto clonado para dentro da pasta 'htdocs' que se encontra onde você instalou o Xampp;
 4. Após colocar o projeto na pasta 'htdocs', volte para a pasta principal do Xampp.
 5. Execute este arquivo: 
@@ -21,6 +21,6 @@ Apenas a interface está funcionando. Para que ela funcione 100%, deverás confi
 
 ## Instalar o Back-End da aplicação:
 
-1. Acessar o link: https://gitlab.com/Marcos_Piesske_Dev/agendaContatoSpring
+1. Acessar o link: https://github.com/MarcosPiesskeDev/agendaContatosSpring
 2. Seguir o passo a passo no README.md do repositório acima.
 
