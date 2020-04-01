@@ -9,7 +9,7 @@ function backIndex(){
 
 function sendData(){
 
-var url = 'http://localhost:8080/api/contacts/new';
+var url = 'http://localhost:8080/contacts';
 
     var json = {
         firstName: document.querySelector('input[id=fNameC]').value,

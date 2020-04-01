@@ -5,7 +5,7 @@ function returnNC(){
 document.addEventListener("DOMContentLoaded", function(){
 
     var myList = document.querySelector('ul[id=listC]');
-    var url = 'http://localhost:8080/api/contacts/list';
+    var url = 'http://localhost:8080/contacts';
     fetch(url)
     .then(response => response.json())
     .then(function(data){
@@ -37,7 +37,7 @@ function findContact(){
     }
 
     var getId = document.querySelector('input[id=findC]').value;
-    var url = 'http://localhost:8080/api/contacts/list/';
+    var url = 'http://localhost:8080/contacts';
   
     var header = {
       method: 'GET',
@@ -50,7 +50,7 @@ function findContact(){
           }
   };
 
-    fetch(url+getId, header)
+    fetch(url+'/'+getId, header)
     .then(response => response.json())
     .then(function(data)  {
 

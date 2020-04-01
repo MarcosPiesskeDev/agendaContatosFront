@@ -4,7 +4,7 @@ function backIndex(){
 
 function deleteById(){
 
-    var url = 'http://localhost:8080/api/contacts/delete/';
+    var url = 'http://localhost:8080/contacts'; 
     var getId = document.querySelector('input[id=idToDelete]').value;
     
     var header = {
@@ -17,7 +17,7 @@ function deleteById(){
                 }
     };
 
-    fetch(url+getId, header)
+    fetch(url+'/'+getId, header)
     .then(function(resolve){
         console.log(resolve); //Prometeu! :D
         window.location.reload();

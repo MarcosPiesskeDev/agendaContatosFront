@@ -1,7 +1,7 @@
 
 function putMethod(){
     
-    var url = "http://localhost:8080/api/contacts/update";
+    var url = "http://localhost:8080/contacts";
     
     var contactData = {
         id: document.querySelector('input[id=getIdDom]').value,
