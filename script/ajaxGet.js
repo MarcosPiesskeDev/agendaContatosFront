@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 <li style="color: white"> Telefone : ${telephone}</li>
                 <hr>`;
           });
-       console.log(data);
       }).catch(error => {
         console.error(error)
     })
@@ -38,7 +37,7 @@ function findContact(){
 
     var getId = document.querySelector('input[id=findC]').value;
     var url = 'http://localhost:8080/contacts';
-  
+    
     var header = {
       method: 'GET',
       contentType: 'json',
@@ -57,18 +56,15 @@ function findContact(){
       if(data == null){
           return window.alert("Não existe um contato com este id");
       }
-      const { id, firstName, lastName, email, telephone} = data
-      
       return document.querySelector('ul[id=findCId]')
-      .innerHTML = `<h5>ID Contato: ${id} </h5>
-          <li> Nome : ${firstName}</li>
+      .innerHTML = `<h5>ID Contato: ${data.body.id} </h5>
+          <li> Nome : ${data.body.firstName}</li>
           <p></p>
-          <li> Sobrenome : ${lastName} </li>
+          <li> Sobrenome : ${data.body.lastName} </li>
           <p></p>
-          <li> E-mail : ${email} </li>
+          <li> E-mail : ${data.body.email} </li>
           <p></p>
-          <li> Telefone : ${telephone}</li>`; 
-        
+          <li> Telefone : ${data.body.telephone}</li>`; 
     }).catch(function(error){
         console.error(error);
   })
